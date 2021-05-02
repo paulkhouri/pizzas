@@ -42,17 +42,6 @@ def get_the_customer_details():
         print("Error in getting P or D")
     return customer_details
 
-
-
-
-
-
-
-
-
-
-
-
 def clean_up_order_list(O):
     """
 
