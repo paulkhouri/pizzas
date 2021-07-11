@@ -88,6 +88,11 @@ def var_test():
     print(id(my_string))
     print(id(x))
 
+def check_structures():
+    my_d = {}
+    my_l = []
+    print(my_d is True, my_l is True)
+
 
 
 
@@ -98,7 +103,8 @@ def var_test():
 
 
 if __name__ == "__main__":
-    var_test()
+    check_structures()
+    #var_test()
     #test_param_length(2,5)
     #main_function()
     #assignment_test()

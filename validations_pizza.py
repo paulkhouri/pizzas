@@ -40,15 +40,6 @@ def get_single_entry(m):
             return response_string
 
 
-def get_single_entry_two_option(m, op1, op2):
-    cont = True
-    while cont is True:
-        choice = get_single_entry(m)
-        if choice!= op1 and choice != op2:
-            print("please choose either {} or {}".format(op1, op2))
-        else:
-            return choice
-
 def get_entry_option_list(m, L, u=True):
     cont = True
     while cont is True:
@@ -71,10 +62,6 @@ def confirmation(m="Please confirm: Y/N: -> "):
             return True
         else:
             return False
-
-
-
-
 
 def get_phone_string():
     cont = True
@@ -108,6 +95,7 @@ def get_phone_string():
         else:
             print("Oops, this doesn't look quite right, phone number length not valid")
 
+# testing
 if __name__ == "__main__":
     p = "02*****11-2-   4   5  6  78"
 

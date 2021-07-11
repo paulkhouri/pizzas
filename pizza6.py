@@ -125,9 +125,12 @@ def edit_order(O):
         print(row)
     print("-"*30)
     choice = get_integer("Please select option to edit:  ", 0, len(O)-1)
-    my_string = "Please update number of {} pizza:  ".format(O[choice][0])
-    new_number = get_integer(my_string, 0, 10)
-    O[choice][2]=new_number
+    my_string = "Please update number of {} pizza: (Enter 0 to delete)  ".format(O[choice][0])
+    new_number = get_integer(my_string, 0, 5)
+    if new_number == 0:
+        O.pop(choice)
+    else:
+        O[choice][2]=new_number
     print("Current order status")
     print_order(O)
     return None
@@ -162,7 +165,8 @@ def main():
                   ("Artichoke Special", 13.5), ("Supreme", 13.5)]
     # each element of the list is also a list with 3 items.
     # pizza name, pizza price, quantity of pizza
-    order_list_map = ["name", "price", "qunatity"]
+    order_list_map = ["name", "price", "qunatityr"
+                                       ""]
     order_list = []
     order_list = test_one()
     order_list = repeated_zero_list()
